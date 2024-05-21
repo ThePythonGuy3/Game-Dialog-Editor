@@ -10,6 +10,8 @@ def run():
 		pass
 	
 	shutil.copytree(path, "./resources/characters")
+	f = open("./resources/characters/dummy", "w+")
+	f.close()
 				 
 	res = []
 	for (dir_path, dir_names, file_names) in walk(path):
