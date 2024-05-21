@@ -1,0 +1,100 @@
+<!doctype html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>L.E.N.S. Dialog Editor</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script src="FileSaver.js"></script>
+	<script src="main.js"></script>
+</head>
+
+<body>
+	<div style="display: flex; flex-direction: column; align-items: center;">
+		<div id="navContainer">
+			<button id="previousButton" style="border-radius: 20px 0 0 20px;">←</button>
+			<p id="tapeText" style="margin-left: 10px; margin-right: 10px;">1/1</p>
+			<button id="nextButton" style="margin-right: 20px; border-radius: 0 20px 20px 0;">→</button>
+
+			<button id="removeButton" style="border-radius: 20px 0 0 20px; border-right: 0;">-</button>
+			<button id="copyButton"><span
+					style="font-size: 12px; margin-right: .125em; position: relative; top: -.125em; left: -.095em">
+					📄<span style="position: absolute; top: .25em; left: .25em">📄</span>
+				</span></button>
+			<button id="addButton" style="margin-right: 20px; border-left: 0; border-radius: 0 20px 20px 0;">+</button>
+
+			<button id="exportButton" style="border-radius: 20px 0 0 20px; border-right: 0;">↓</button>
+			<button id="importButton" style="border-radius: 0 20px 20px 0;">↑</button>
+			<input style="opacity: 0" type="file" id="fileImport">
+		</div>
+
+		<div id="dialogContainer">
+			<div class="dialog" id="topDialog">
+				<div class="imageContainer">
+					<img class="dialogImage" id="topImage" src="" />
+				</div>
+
+				<div class="dialogTextContainer">
+					<p class="title" id="topTitle"></p>
+					<p class="content" id="topContent"></p>
+				</div>
+			</div>
+
+			<div class="dialog" id="bottomDialog">
+				<div class="imageContainer">
+					<img class="dialogImage" id="bottomImage" src="" />
+				</div>
+
+				<div class="dialogTextContainer">
+					<p class="title" id="bottomTitle"></p>
+					<p class="content" id="bottomContent"></p>
+				</div>
+			</div>
+		</div>
+
+		<div id="editAreaContainer">
+			<div id="imageSelector">
+				<div class="avatar" style="display: inline-block;"></div>
+			</div>
+
+			<div style="width: 0.5px; height: 150px; background-color: black;"></div>
+
+			<div id="fields">
+				<div class="optionContainer" style="justify-content: space-between;">
+					<input id="nameInput" type="text" placeholder="Character Name">
+					<textarea id="textInput" placeholder="Character Text"></textarea>
+				</div>
+			</div>
+
+			<div style="width: 0.5px; height: 150px; background-color: black;"></div>
+
+			<div id="options">
+				<div class="optionContainer" style="gap: 12px;">
+					<div class="option">
+						<input id="topOrBottomCheckbox" type="checkbox" autocomplete="off" />
+						<p>Edit the top dialog box</p>
+					</div>
+
+					<div class="option">
+						<input id="showTopCheckbox" type="checkbox" autocomplete="off" />
+						<p>Show top</p>
+					</div>
+
+					<div class="option">
+						<input id="showBottomCheckbox" type="checkbox" checked autocomplete="off" />
+						<p>Show bottom</p>
+					</div>
+
+					<div class="option">
+						<input id="instantaneousCheckbox" type="checkbox" autocomplete="off" />
+						<p>Instantaneous</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
