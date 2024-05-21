@@ -20,7 +20,7 @@ def run():
 	c = ";".join(res)
 
 	f = open("indexed.txt", "w+")
-	f.write(c.replace("\\", "/").replace("/Acerola_Jam_Real", ""))
+	f.write(c.replace("\\", "/").replace("./Acerola_Jam_Real", ""))
 	f.close()
 
 	print(c)

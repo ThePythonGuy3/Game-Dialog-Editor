@@ -41,7 +41,7 @@ class InGameDialogFeed {
 
 class DialogFeed {
 	constructor(face, character, text, top, showTop, showBottom, instant) {
-		this.face = face;
+		this.face = face.replace("\\", "/");
 		this.character = character;
 		this.text = text;
 		this.top = top;
